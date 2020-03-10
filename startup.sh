@@ -10,6 +10,12 @@ sed -i 's/password .*/password '$VPN_PASSWORD'/' /etc/ppp/options.l2tpd.client
 
 rm -f /var/run/pluto/pluto.pid
 modprobe af_key
+
+default_iface=$(awk '$2 == 00000000 { print $1 }' /proc/net/route)
+default_route=$(ip r s 0.0.0.0/0 |  awk '{print $3}')
+
+ip r a $VPN_SERVER_IPV4 via $default_route dev $default_iface
+
 # startup ipsec tunnel
 ipsec initnss
 sleep 1

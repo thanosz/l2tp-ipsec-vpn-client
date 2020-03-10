@@ -6,11 +6,12 @@ A tiny Alpine based docker image to quickly setup an L2TP over IPsec VPN client 
 
 ## Changes from ubergarm/l2tp-ipsec-vpn-client
 
-1. Removes ike= line from ipsec.conf
-2. Adds xl2tpd logging to /var/log/xl2tpd.log
-3. Adds creation of 0.0.0.0/1 route via ppp0
+1. Removes /var/run/pluto/pluto.pid on startup
+2. Removes ike= line from ipsec.conf
+3. Adds xl2tpd logging to /var/log/xl2tpd.log
 4. Adds redial options to /etc/ppp/options.l2tpd.client
-5. Removes /var/run/pluto/pluto.pid on startup
+5. Adds explicit route to VPN_SERVER via default route
+6. Adds creation of 0.0.0.0/1 route via ppp0
 
 This works for me for vpnunlimited VPN provider
 
