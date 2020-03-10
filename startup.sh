@@ -9,7 +9,7 @@ sed -i 's/password .*/password '$VPN_PASSWORD'/' /etc/ppp/options.l2tpd.client
 
 
 rm -f /var/run/pluto/pluto.pid
-
+modprobe af_key
 # startup ipsec tunnel
 ipsec initnss
 sleep 1
