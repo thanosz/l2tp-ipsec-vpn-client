@@ -4,7 +4,7 @@ l2tp-ipsec-vpn-client
 
 A tiny Alpine based docker image to quickly setup an L2TP over IPsec VPN client w/ PSK.
 
-##Changes from ubergarm/l2tp-ipsec-vpn-client
+## Changes from ubergarm/l2tp-ipsec-vpn-client
 Removes ike= line from ipsec.conf
 Adds xl2tpd logging to /var/log/xl2tpd.log
 Adds creation of 0.0.0.0/1 route via ppp0
