@@ -17,5 +17,6 @@ COPY ipsec.secrets /etc/ipsec.secrets
 COPY xl2tpd.conf /etc/xl2tpd/xl2tpd.conf
 COPY options.l2tpd.client /etc/ppp/options.l2tpd.client
 COPY startup.sh /
+RUN echo "/sbin/ip r a 0.0.0.0/1 dev ppp0" >> /etc/ppp/ip-up
 
 CMD ["/startup.sh"]
