@@ -11,7 +11,7 @@ A tiny Alpine based docker image to quickly setup an L2TP over IPsec VPN client 
 3. Adds xl2tpd logging to /var/log/xl2tpd.log
 4. Adds redial options to /etc/ppp/options.l2tpd.client
 5. Adds explicit route to VPN_SERVER via default route
-6. Adds creation of 0.0.0.0/1 route via ppp0
+6. Adds default route via ppp0
 7. Modifies idle timeout to 0 (disables it)
 8. Autoloads af_key module
 
