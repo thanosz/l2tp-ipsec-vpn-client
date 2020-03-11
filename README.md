@@ -14,6 +14,7 @@ A tiny Alpine based docker image to quickly setup an L2TP over IPsec VPN client 
 6. Adds default route via ppp0
 7. Modifies idle timeout to 0 (disables it)
 8. Autoloads af_key module
+9. Adds iptables NAT rules
 
 This works for me for vpnunlimited VPN provider
 

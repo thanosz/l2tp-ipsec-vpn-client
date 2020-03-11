@@ -1,0 +1,7 @@
+#!/bin/sh
+#
+# This script is run by pppd when there's a successful ppp connection.
+#
+/sbin/ip r a default dev ppp0
+iptables -t nat -C POSTROUTING -o ppp0 -j MASQUERADE || iptables -t nat -A POSTROUTING -o ppp0 -j MASQUERADE
+

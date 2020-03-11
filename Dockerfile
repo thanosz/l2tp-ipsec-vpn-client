@@ -13,6 +13,7 @@ RUN set -x && \
     && touch /var/run/xl2tpd/l2tp-control
 
 RUN echo "/sbin/ip r a default dev ppp0" >> /etc/ppp/ip-up
+COPY ip-up /etc/ppp/ip-up
 COPY ipsec.conf /etc/ipsec.conf
 COPY ipsec.secrets /etc/ipsec.secrets
 COPY xl2tpd.conf /etc/xl2tpd/xl2tpd.conf
